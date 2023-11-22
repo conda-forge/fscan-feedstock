@@ -1,5 +1,5 @@
 {% set name = "fscan" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fscan-{{ version }}.tar.gz
-  sha256: 50d039edd1a6c8945cc78b5623a67049c82883d4bcd12d23d5b36befff410161
+  sha256: 20c5e88e15193bc262f135a63dda6b3bff132f8809da08da613249f46ba92944
 
 build:
   entry_points:
