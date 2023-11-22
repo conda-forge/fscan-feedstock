@@ -1,5 +1,5 @@
 {% set name = "fscan" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fscan-{{ version }}.tar.gz
-  sha256: 7e68ae3e5ecb0caf4ec59ff7c9cfebd4bfd88586cc0daa83d66f1db1f8122688
+  sha256: 50d039edd1a6c8945cc78b5623a67049c82883d4bcd12d23d5b36befff410161
 
 build:
   entry_points:
@@ -15,6 +15,10 @@ build:
     - postProcess = fscan:post.main
     - AnalysisSummary = fscan:status.main
     - clean = fscan:clean.main
+    - FscanFineToothPlot = fscan.plot.finetoothplot:main
+    - FscanStaticPlot = fscan.plot.static:main
+    - FscanAutoTag = fscan.process.autotag:main
+    - FscanDTutils = fscan.utils.dtutils:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -40,6 +44,10 @@ test:
     - postProcess --help
     - AnalysisSummary --help
     - clean --help
+    - FscanFineToothPlot --help
+    - FscanStaticPlot --help
+    - FscanAutoTag --help
+    - FscanDTutils --help
   requires:
     - pip
 
