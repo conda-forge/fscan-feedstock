@@ -1,5 +1,5 @@
 {% set name = "fscan" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fscan-{{ version }}.tar.gz
-  sha256: dac1b03922ca55ed63c6101b12635f1d7f98b6f20b5bb8236af055ebfd3aee39
+  sha256: 1f764b0e94f86758c5c6e0a4139a262871e88b4e36b049728d631e32b317e28d
 
 build:
   entry_points:
@@ -49,6 +49,7 @@ test:
     - FscanStaticPlot --help
     - FscanAutoTag --help
     - FscanDTutils --help
+    - FscanSummaryPage --help
   requires:
     - pip
 
