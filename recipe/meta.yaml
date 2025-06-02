@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "fscan" %}
 {% set version = "0.3.6" %}
 
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fscan-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fscan-{{ version }}.tar.gz
   sha256: 2fb08d06e3f2a64cedbaf90dfb6829b34e7540a595f70ae8f4a5126373707619
 
 build:
@@ -22,16 +23,16 @@ build:
     - FscanSummaryPage = fscan:html.main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=61.0
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - bokeh
     - gwdetchar
     - pycondor
@@ -52,6 +53,7 @@ test:
     - FscanSummaryPage --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/fscan/
