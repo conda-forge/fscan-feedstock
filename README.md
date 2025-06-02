@@ -1,7 +1,7 @@
 About fscan-feedstock
 =====================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fscan-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fscan-feedstock-eg-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/fscan/
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20684&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/fscan-feedstock?branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/fscan-feedstock-eg-feedstock?branchName=main">
       </a>
     </td>
   </tr>
